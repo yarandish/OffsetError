@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link type="text/css" href="bootstrap.rtl.css" rel="stylesheet" />
+    <link type="text/css" href="bootstrap-table.min.css" rel="stylesheet" />
+    <link type="text/css" href="jquery.resizableColumns.css" rel="stylesheet" />
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="bootstrap-table.min.js"></script>
+    <script src="bootstrap-table-resizable.min.js"></script>
+    <script src="jquery.resizableColumns.js"></script>
+
+    <style>
+        .table-aria {
+            width: 100%;
+            padding: 25px;
+        }
+
+        .buttons-aria {
+            width: 100%;
+            padding: 25px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('#table').bootstrapTable()
+        })
+
+        $(document).ready(function () {
+            $(".removetable").click(function (e) { 
+                $(".table-aria").remove();
+            });
+        });
+    </script>
+
+</head>
+
+<body dir="rtl">
+
+    <div>
+        <div class="table-aria">
+
+            <table data-toggle="table" id="table" data-resizable="true" style="direction: rtl; text-align: right;">
+                <thead>
+                    <tr>
+                        <th>Column1</th>
+                        <th>Column2</th>
+                        <th>Column3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>data1</td>
+                        <td>data2</td>
+                        <td>data3</td>
+                    </tr>
+                    <tr>
+                        <td>data1</td>
+                        <td>data2</td>
+                        <td>data3</td>
+                    </tr>
+                    <tr>
+                        <td>data1</td>
+                        <td>data2</td>
+                        <td>data3</td>
+                    </tr>
+                    <tr>
+                        <td>data1</td>
+                        <td>data2</td>
+                        <td>data3</td>
+                    </tr>
+                    <tr>
+                        <td>data1</td>
+                        <td>data2</td>
+                        <td>data3</td>
+                    </tr>
+                    <tr>
+                        <td>data1</td>
+                        <td>data2</td>
+                        <td>data3</td>
+                    </tr>
+                    <tr>
+                        <td>data1</td>
+                        <td>data2</td>
+                        <td>data3</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="buttons-aria">
+            <button class="btn btn-danger removetable">Close table</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
